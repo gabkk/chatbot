@@ -34,7 +34,9 @@ const replyMessage = (message) => {
     // If there is not any message return by Recast.AI for this current conversation
     if (!result.replies.length) {
       message.addReply({ type: 'text', content: 'I don\'t have the reply to this yet :)' })
-    } else {
+      message.addReply({ type: 'text', content: 'What what whatttttt !!!!' })
+    }
+    else {
       // Add each reply received from API to replies stack
       result.replies.forEach(replyContent => message.addReply({ type: 'text', content: replyContent }))
     }
